@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>Arrays!!!</title>
+
+	<!--
+	Métodos de matriz JavaScript
+	O objeto Array possui muitas propriedades e métodos que ajudam os desenvolvedores a manipular matrizes com facilidade e eficiência. Você pode obter o valor de uma propriedade especificando arrayname.property e a saída de um método especificando arrayname.method ().
+
+
+	Propriedade length -> Se você deseja saber o número de elementos em uma matriz, pode usar a propriedade length.
+	propriedade prototype -> Se você deseja adicionar novas propriedades e métodos, pode usar a propriedade prototype.
+	método reverse -> Você pode reverter a ordem dos itens em uma matriz usando um método reverso.
+	método sort -> Você pode classificar os itens em uma matriz usando o método de classificação.
+	método pop -> Você pode remover o último item de uma matriz usando um método pop.
+	método shift -> Você pode remover o primeiro item de uma matriz usando o método shift.
+	método push -> Você pode adicionar um valor como o último item da matriz.
+	-->
+
+	<script type="text/javascript">
+		var estudantes = new Array("John", "Ann", "Aaron", "Edwin", "Elizabeth");
+		Array.prototype.displayItems=function(){
+			for (i=0;i<this.length;i++){
+				document.write(this[i] + "<br />");
+			}
+		}	
+		document.write("Array de Estudantes<br />");
+		estudantes.displayItems();
+		document.write("<br />O número de itens no Array de estudantes é " + estudantes.length + "<br />");
+		document.write("<br />Array de estudantes de forma ordenada ascendente<br />");
+		estudantes.sort();
+		estudantes.displayItems();
+		document.write("<br />Array de estudantes de forma ordenada descendente (Reverso)<br />");
+		estudantes.reverse();
+		estudantes.displayItems();
+		document.write("<br />O Array de estudantes após remover o último item<br />");
+		estudantes.pop();
+		estudantes.displayItems();
+        document.write("<br />O Array de estudantes após o PUSH<br />");
+        estudantes.push("Novo item no Array (Novo estudante)");
+		estudantes.displayItems();
+	</script>
+</head>
+<body>
+</body>
+</html>
